@@ -1,0 +1,194 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #444;
+  color: #aaa;
+  padding: 0.5em;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#steps {
+  padding: 0.5em;
+  margin: unset;
+}
+
+#steps ol {
+  margin: 0.5em;
+}
+
+#text {
+  font-size: 3em;
+  font-weight: 900;
+}
+
+#counter {
+  font-size: 0.5em;
+  font-family: menlo, monospace;
+}
+
+#start-button {
+  border: 1px solid;
+  padding: 2em;
+}
+
+#breathe-counter {
+  background-color: #333;
+  border-radius: 50%;
+  height: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+
+#breathe-counter>div {
+  position: absolute;
+  top: 40%;
+  margin: auto;
+  text-align: center;
+  width: 100%
+}
+
+#install-instructions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+#install-link, #install-text {
+  text-align: center;
+  width: 100%;
+  padding: 0.5em;
+  background: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.search-options {
+  padding: 0.5em;
+}
+
+.small-text {
+  font-size: small;
+}
+
+a {
+  color: #aaa
+}
+
+#searchbox {
+  width: 100%;
+  border-bottom: 1px solid;
+}
+
+#notice {
+  display: block;
+  padding: 0.5em;
+}
+
+.result {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #999
+}
+
+.content {
+  color: #eee;
+  background: #555;
+  padding: 5px;
+  width: 100%;
+  min-height: 100px;
+}
+
+
+.links {
+    color: #ddd;
+}
+
+.links:hover {
+    color: unset;
+}
+
+.btn {
+  background: #333;
+  padding: 5px;
+  display: inline-block;
+}
+
+
+.text-header, .text-body, .text-body *{
+  /* font-family: monospace; */
+  word-break: break-all;
+}
+.text-header {
+  font-size: larger;
+  font-weight: bold;
+}
+.text-body {
+  white-space: pre-wrap;
+  margin-bottom: 3em;;
+}
+.comment-body {
+  margin-bottom: 40px;
+}
+
+a {
+  color: #ddd;
+}
+
+a:hover {
+  color: unset;
+}
+
+.gray {
+  opacity: 50%;
+}
+
+.gray:hover {
+  opacity: unset;
+}
+
+.body-length {
+  color: yellow;
+  font-weight: bold;
+  background: green;
+  padding: 2px;
+  margin-right: 5px;
+}
+
+.copy-button {
+  color: white;
+  font-weight: bold;
+  background: orange;
+  padding: 2px 3px;
+  margin-right: 5px;
+}
+
+.search-field {
+  padding: 0.5em
+}
+
+.p {
+  padding: 0.25em !important;
+}

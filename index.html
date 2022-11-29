@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<title>API Search</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/icon.png">
+<link rel="icon" type="image/png" sizes="any" href="images/icon.png">
+
+<link rel='manifest' href='manifest.json'>
+<link media="all" rel="stylesheet" href="style.css" />
+<link media="all" rel="stylesheet" href="w3.css" />
+<script src="w3.js"></script>
+
+
+<body>
+
+<div id="searchbox">
+  <form onsubmit="searchReddit();">
+    <div class="row">
+      <input placeholder="term" id="searchterm" class="w3-col s4 search-field" />
+      <input placeholder="sub" id="subreddit" class="w3-col s4 search-field" />
+      <input placeholder="name" id="username" class="w3-col s4 search-field" />
+    </div>
+    <div class="row small-text">
+      <span style="float: right;" id="todays-date"> </span>
+      <label for="submission">Q's?:</label> <input type="checkbox" checked name="submission" id="submission" />
+      <!-- <label for="submission">Min Length?:</label> <input type="text" name="min-length" id="min-length" /> -->
+      <button class="w3-btn p w3-green" onclick="searchReddit();">Search</button>
+    </div>
+  </form>
+</div>
+
+<div id="notice"></div>
+
+<div id="id01" class="">
+  <div class="result" w3-repeat="data">
+    <small class="small-text links gray">
+      <a class="copy-button" onclick="copyText('{{id}}')">Copy</a> 
+      <a href="https://www.reddit.com/r/{{subreddit}}" target="_blank">r/{{subreddit}}</a> | 
+      <a href="https://www.reddit.com/u/{{author}}" target="_blank">u/{{author}}</a> | 
+      <a href="https://www.reddit.com{{permalink}}">{{timeDiff}} ago</a>
+      <span class="w3-hide body-length">{{bodyLength}}</span>
+    <textarea id="{{id}}" class="content">[{{title}}]({{full_link}})</textarea>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+id01 = document.getElementById("id01");
+id01.style.display = "none";
+
+var d = new Date();
+document.getElementById("todays-date").innerHTML = "Today: " + d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate() + ", " + d.getHours() + ":" + d.getMinutes();
+</script>
+
+</body>
+
+</html>
